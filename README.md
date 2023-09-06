@@ -1,3 +1,5 @@
+> 一起学习 k8s 吧  
+> 有问题联系：2304262737@qq.com
 # k8s-webhook
 使用 kubebuilder 为 k8s 原生资源创建 webhook，在 pod 创建之前修改 pod
 
