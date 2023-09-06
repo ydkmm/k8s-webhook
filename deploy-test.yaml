@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "test-deploy"
+  labels:
+    name: admission-webhook-example
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      name: admission-webhook-example
+  template:
+    metadata:
+      labels:
+        name: admission-webhook-example
+    spec:
+      containers:
+        - name: test-webhook
+          image: "alpine:3.14"
+          command:
+            - sleep
+            - "3600"
+          resources:
+            limits:
+              cpu: 200m
+              memory: 500Mi
+            requests:
+              cpu: 100m
+              memory: 200Mi

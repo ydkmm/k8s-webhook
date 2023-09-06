@@ -1,0 +1,14 @@
+domain: ydkmm.fun
+layout:
+- go.kubebuilder.io/v3
+projectName: k8s-webhook
+repo: ydkmm-webhook
+resources:
+- group: core
+  kind: Pod
+  path: k8s.io/api/core/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    webhookVersion: v1
+version: "3"
